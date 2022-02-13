@@ -16,6 +16,7 @@ pub fn cb02_var_mut() {
     //==可变声明==== mut
     //
     let mut mi = 45; //可变的变量必须加 mut.
+    println!("mi = {}",mi);
     mi = 100;
     println!("mi = {}",mi);
 
