@@ -5,6 +5,7 @@ mod basic{
     mod notes08_str;
     mod notes08_map;
     mod notes09_err;
+    mod notes10_generic;
 }
 
 pub fn show() {
