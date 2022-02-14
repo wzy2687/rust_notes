@@ -66,6 +66,11 @@ fn cb02_vec_bianli() {
         println!("i={}",i);
     }
 
+    show_vec_item(&v1);
 }
-
-
+//vec 作为参数的, 引用表示.
+fn show_vec_item(arr :&[i32]) {
+    for i in arr {
+        println!("i = {}",i);
+    }
+}
