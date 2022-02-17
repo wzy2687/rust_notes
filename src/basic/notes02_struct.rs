@@ -46,12 +46,13 @@ fn cb02_struct_noname() {
 }
 
 // 空结构体. 也称为单元结构体. 用于某种类型想实现trait, 但是又没有成员的情况.
+// go中函数为接口, rust中的trait 似乎,必须是方法.
 #[derive(Debug)]
 struct NStruct ;
 #[test]
 fn cb03_struct_noattr() {
     let c = NStruct;
-    println!("c.R= {:?}",c); // 访问属性的时候, 用下表.  n.0, n.1, ... n.x
+    println!("c.R= {:?}",c); // 访问属性的时候,
 }
 
 //结构体, 也可以有方法. 实现起来和其它语言有点差别. 大差不差.
@@ -59,7 +60,7 @@ fn cb03_struct_noattr() {
 // 方法, 就是参数中有(&self),  关联函数, 就是参数中没有 self.
 //一个结构体, 可以有多个impl 块.
 
-
+#[derive(Debug)]
 struct Rect {
     w :i32,
     h:i32,
@@ -84,4 +85,8 @@ impl Rect {
 fn cb04_struct_method() {
     let rect = Rect{w:40,h:50};
     println!("area = {}",rect.Area());// 调用方式和其它语言差不多.
+
+    let r2 = Rect::Squre(4);
+    println!("r2 = {:?}",r2);// 调用方式和其它语言差不多.
+
 }
